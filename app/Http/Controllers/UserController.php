@@ -1,12 +1,19 @@
 <?php
-
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
+
+use App\Http\Requests\ShowUser;
+use App\User;
+
 
 class UserController extends Controller
 {
     //
-    public function showUser($id) {
-        dd($id);
+    public function showUser(ShowUser $request, User $user) {
+
+        $userId = $request['id'];
+        $user = $user->find($userId);
+//        return $user;
+        return view('view', ['user' => $user]);
+
     }
 }
