@@ -29,7 +29,7 @@ class StoreComment extends BaseRequest
         return [
             'id.required' => 'Missing key/value for :attribute',
             'comments.required' => 'Missing key/value for :attribute',
-            'passwords.required' => 'Missing key/value for :attribute',
+            'password.required' => 'Missing key/value for :attribute',
             'id.numeric' => 'Invalid id',
             'id.exists' => 'No such user (1)'
         ];
