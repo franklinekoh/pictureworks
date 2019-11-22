@@ -6,7 +6,8 @@
 -   Clone this project into the htdocs folder.
 -   Navigate to project root in command line e.g. cd c:/xampp/htdocs/{project}.
 -   `cp` `.env.example` to `.env` and set your environment variables.
--   Run `Composer Insall` .
+-   Run `Composer Insall`.
+-   Run `php artisan key:generate`.
 -   Run `php artisan serve`.
 
 
@@ -17,6 +18,6 @@
 -   Run `php artisan db:seed`.
 -   Run `./vendor/bin/phpunit tests/Feature/StoreCommentTest.php`.
 -   Run `php artisan comment:append` and follow the prompt.
--   Visit `localhost:8000`.
+-   Visit `localhost:8000/user/1`.
 
 
