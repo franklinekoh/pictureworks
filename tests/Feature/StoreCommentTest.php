@@ -34,7 +34,7 @@ class StoreCommentTest extends TestCase
             'comments' => 'This is the best comment'
         ];
 
-        $response =$this->post('/comment', $data, $this->defaultHeaders);
+        $response = $this->post('/comment', $data, $this->defaultHeaders);
 
         $response->assertStatus(200)
             ->assertSeeText("OK");

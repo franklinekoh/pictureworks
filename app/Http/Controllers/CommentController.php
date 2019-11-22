@@ -16,14 +16,7 @@ class CommentController extends BaseController
      * @param User $user
      * @return \Illuminate\Http\JsonResponse
      */
-
-
-    /**
-     * @OA\Get(
-     *     path="/projects",
-     *     @OA\Response(response="200", description="Display a listing of projects.")
-     * )
-     */
+    
     public function store(StoreComment $request, User $user){
 
         if (!AuthUtility::check($request->input('password')))
