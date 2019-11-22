@@ -29,4 +29,12 @@ class User extends Authenticatable
     ];
 
     public $timestamps = false;
+
+    public function appendUserComment($comments){
+        $currentComment = $this->comments;
+        $newComment = $currentComment .= "\n".$comments;
+
+        $this->comments = $newComment;
+       return $this->save();
+    }
 }

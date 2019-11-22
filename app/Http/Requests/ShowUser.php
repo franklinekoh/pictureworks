@@ -18,11 +18,11 @@ class ShowUser extends BaseRequest
         ];
     }
 
-    /**
-     * Get custom messages for validator errors.
-     *
-     * @return array
-     */
+        /**
+         * Get custom messages for validator errors.
+         *
+         * @return array
+         */
 
     public function messages()
     {
