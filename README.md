@@ -15,7 +15,8 @@
 -   Follow the instructions in the Local Section Setup Above.
 -   Run `php artisan migrate`.
 -   Run `php artisan db:seed`.
--   Run `./vendor/bin/phpunit tests/Feature/StoreCommentTest.php`
+-   Run `./vendor/bin/phpunit tests/Feature/StoreCommentTest.php`.
+-   Run `php artisan comment:append` and follow the prompt.
 -   Visit `localhost:8000`.
 
 
