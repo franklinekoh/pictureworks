@@ -13,7 +13,7 @@
         <header>
             <span class="avatar"><img src="{{url('images/users/'.$user->id.'.jpg')}}" alt="" /></span>
             <h1>{{$user->name}}</h1>
-            <p>{!! nl2br(e($user->comments)) !!}</p>
+            <p>{!! nl2br(e($user->comments->body)) !!}</p>
         </header>
     </section>
     <footer id="footer">

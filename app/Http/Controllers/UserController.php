@@ -10,7 +10,6 @@ class UserController extends BaseController
 
     /**
      * Displays a specific user
-     *
      * @param ShowUser $request
      * @param User $user
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -18,7 +17,7 @@ class UserController extends BaseController
     public function showUser(ShowUser $request, User $user) {
 
         $userId = $request['id'];
-        $user = $user->find($userId)->comments();
+        $user = $user->find($userId)->with(['comments'])->first();
 
         return view('view', ['user' => $user]);
 

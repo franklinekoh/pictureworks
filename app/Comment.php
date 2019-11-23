@@ -21,7 +21,7 @@ class Comment extends Model
      * @var array
      */
     protected $hidden = [
-        'id'
+
     ];
 
     public $timestamps = false;
