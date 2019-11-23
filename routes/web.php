@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/user/{id}', 'UserController@showUser');
 
 Route::post('/comment', 'CommentController@store');

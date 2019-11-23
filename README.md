@@ -16,12 +16,14 @@
 -   Run `php artisan db:seed`.
 -   Run `./vendor/bin/phpunit tests/Feature/StoreCommentTest.php`.
 -   Run `php artisan comment:append` and follow the prompt.
--   Visit `localhost:8000/user/1`.
+-   Visit `localhost:8000`.
 
 ## Documentation
 
 ### Postman documentation
 https://www.getpostman.com/collections/24ce2de1b2d6eba88f67
+### Swagger documentation
+-   Visit `localhost:8000`.
 
 
 
