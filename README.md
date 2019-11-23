@@ -1,9 +1,7 @@
 ## Pictureworks test
 
 ### Local Setup
--   Ensure you have Xampp or Wampp Installed on your local computer.
--   Locate C:/xamppOrWampp/htdocs.
--   Clone this project into the htdocs folder.
+-   Clone this project into your local computer, run `git clone https://github.com/franklinekoh/pictureworks.git`.
 -   Navigate to project root in command line e.g. cd c:/xampp/htdocs/{project}.
 -   `cp` `.env.example` to `.env` and set your environment variables.
 -   Run `Composer Insall`.
