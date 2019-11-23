@@ -10,7 +10,12 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     /**
-     * @OA\Info(title="Pictureworks documentation", version="0.1")
+     * @OA\Info(title="Pictureworks documentation",
+     *      version="0.1",
+     *     @OA\Contact(
+     *         email="ekohfranklin@gmail.com"
+     *     )
+     * )
      */
 
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;

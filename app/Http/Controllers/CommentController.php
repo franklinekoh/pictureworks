@@ -15,6 +15,41 @@ class CommentController extends BaseController
      * @param StoreComment $request
      * @param User $user
      * @return \Illuminate\Http\JsonResponse
+     *
+     * * @OA\Post(
+     *     path="/comment",
+     *     tags={"comment"},
+     *     summary="Append user comment",
+     *      @OA\Parameter(
+     *     name="id",
+     *     description="user id",
+     *      required=true,
+     *     in="query",
+     *     @OA\Schema(
+     *     type="integer"
+     * ),
+     *     @OA\Parameter(
+     *     name="password",
+     *     description="user password",
+     *     required=true,
+     *     in="query",
+     *     @OA\Schema(
+     *     type="string"
+     * ),
+     *     @OA\Parameter(
+     *     name="comments",
+     *     description="User comment",
+     *     required=true,
+     *     in="query",
+     *     @OA\Schema(
+     *     type="string"
+     * )
+     * )
+     * )
+     * ),
+     *     @OA\Response(response="200", description="Comment successfully appended"),
+     *      @OA\Response(response="422", description="Unprocessed entity. (validation errors)")
+     * )
      */
 
     public function store(StoreComment $request, User $user){

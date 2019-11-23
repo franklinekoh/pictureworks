@@ -2,9 +2,40 @@
     "openapi": "3.0.0",
     "info": {
         "title": "Pictureworks documentation",
+        "contact": {
+            "email": "ekohfranklin@gmail.com"
+        },
         "version": "0.1"
     },
     "paths": {
+        "/comment": {
+            "post": {
+                "tags": [
+                    "comment"
+                ],
+                "summary": "Append user comment",
+                "operationId": "App\\Http\\Controllers\\CommentController::store",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "user id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Comment successfully appended"
+                    },
+                    "422": {
+                        "description": "Unprocessed entity. (validation errors)"
+                    }
+                }
+            }
+        },
         "/user/{id}": {
             "get": {
                 "tags": [
