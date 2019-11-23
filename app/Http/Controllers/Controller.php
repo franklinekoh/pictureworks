@@ -10,7 +10,7 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     /**
-     * @OA\Info(title="My First API", version="0.1")
+     * @OA\Info(title="Pictureworks documentation", version="0.1")
      */
 
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;

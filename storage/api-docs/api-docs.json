@@ -1,16 +1,34 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "My First API",
+        "title": "Pictureworks documentation",
         "version": "0.1"
     },
     "paths": {
-        "/projects": {
+        "/user/{id}": {
             "get": {
-                "operationId": "App\\Http\\Controllers\\CommentController::store",
+                "tags": [
+                    "user"
+                ],
+                "summary": "Get user information",
+                "operationId": "App\\Http\\Controllers\\UserController::showUser",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "user id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
-                        "description": "Display a listing of projects."
+                        "description": "Display user information alongside comments"
+                    },
+                    "422": {
+                        "description": "Unprocessed entity. (validation errors)"
                     }
                 }
             }
