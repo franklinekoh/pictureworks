@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Comment;
 
 class User extends Authenticatable
 {
@@ -36,10 +37,10 @@ class User extends Authenticatable
     }
 
     public function appendUserComment($comments){
-        $currentComment = $this->comments()->body;
+        $currentComment = $this->comments()->first('body')->body;
         $newComment = $currentComment .= "\n".$comments;
 
-        $this->comments()->body = $newComment;
-        return $this->comments()->save();
+       return Comment::where('user_id', $this->id)
+                    ->update(['body' => $newComment]);
     }
 }

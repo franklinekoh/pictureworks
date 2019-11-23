@@ -22,7 +22,8 @@ class CommentController extends BaseController
         if (!AuthUtility::check($request->input('password')))
             return $this->respondUnauthorized();
 
-        $updated = $user->findOrFail($request->input('id'))->appendUserComment($request->input('comments'));
+        $updated = $user->findOrFail($request->input('id'))
+            ->appendUserComment($request->input('comments'));
 
         if (!$updated)
             return $this->respond('Could not update database', 500);
