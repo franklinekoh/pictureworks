@@ -16,7 +16,7 @@ class CommentController extends BaseController
      * @param User $user
      * @return \Illuminate\Http\JsonResponse
      */
-    
+
     public function store(StoreComment $request, User $user){
 
         if (!AuthUtility::check($request->input('password')))

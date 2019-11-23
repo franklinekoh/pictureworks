@@ -10,7 +10,7 @@ class StoreCommentTest extends TestCase
 {
 
     /** @test */
-    public function it_returns_ok_on_json_post_successfully_appending_a_new_comment(){
+    public function it_returns_ok_successfully_appending_a_new_comment(){
 
         $data = [
             'id' => 1,
@@ -25,21 +25,6 @@ class StoreCommentTest extends TestCase
 
     }
 
-    /** @test */
-    public function it_returns_ok_on_form_field_post_successfully_appending_a_new_comment(){
-
-        $data = [
-            'id' => 1,
-            'password' => '720DF6C2482218518FA20FDC52D4DED7ECC043AB',
-            'comments' => 'This is the best comment'
-        ];
-
-        $response = $this->post('/comment', $data, $this->defaultHeaders);
-
-        $response->assertStatus(200)
-            ->assertSeeText("OK");
-
-    }
 
     /** @test */
     public function it_returns_validation_error(){
@@ -70,7 +55,7 @@ class StoreCommentTest extends TestCase
             'password' => 'secret'
         ];
 
-        $response =$this->postJson('/comment', $data, $this->defaultHeaders);
+        $response = $this->postJson('/comment', $data, $this->defaultHeaders);
         $response->assertStatus(401)
             ->assertSeeText("Invalid password");
 
