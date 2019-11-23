@@ -13,16 +13,32 @@
                 "tags": [
                     "comment"
                 ],
-                "summary": "Append user comment",
+                "summary": "Appends user comment",
                 "operationId": "App\\Http\\Controllers\\CommentController::store",
                 "parameters": [
                     {
                         "name": "id",
                         "in": "query",
-                        "description": "user id",
+                        "description": "User id",
                         "required": true,
                         "schema": {
                             "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "comments",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
                         }
                     }
                 ],
