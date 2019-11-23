@@ -30,11 +30,16 @@ class User extends Authenticatable
 
     public $timestamps = false;
 
+
+    public function comments(){
+        return $this->hasOne('App\Comment');
+    }
+
     public function appendUserComment($comments){
-        $currentComment = $this->comments;
+        $currentComment = $this->comments()->body;
         $newComment = $currentComment .= "\n".$comments;
 
-        $this->comments = $newComment;
-       return $this->save();
+        $this->comments()->body = $newComment;
+        return $this->comments()->save();
     }
 }
