@@ -23,6 +23,7 @@
 ### Postman documentation
 https://www.getpostman.com/collections/24ce2de1b2d6eba88f67
 ### Swagger documentation
+-   Run `php artisan  l5-swagger:generate`
 -   Visit `localhost:8000`.
 
 
