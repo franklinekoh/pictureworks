@@ -2,6 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 use App\User;
+use App\Comment;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -19,6 +20,15 @@ use Illuminate\Support\Str;
 $factory->define(User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
-        'comments' => $faker->realText(200)
+    ];
+});
+
+$factory->define(Comment::class, function (Faker $faker){
+    static $users;
+    $users = $users ?: User::all();
+
+    return [
+        'body' => $faker->realText(),
+        'user_id' => $users->random()->id
     ];
 });

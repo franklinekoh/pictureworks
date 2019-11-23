@@ -18,7 +18,8 @@ class UserController extends BaseController
     public function showUser(ShowUser $request, User $user) {
 
         $userId = $request['id'];
-        $user = $user->find($userId);
+        $user = $user->find($userId)->comments();
+
         return view('view', ['user' => $user]);
 
     }
