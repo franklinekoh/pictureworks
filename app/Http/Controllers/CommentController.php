@@ -46,6 +46,7 @@ class CommentController extends BaseController
      *         )
      *     ),
      *  @OA\Response(response="200", description="Comment successfully appended"),
+     *   @OA\Response(response="401", description="Unauthorized. (Invalid password)"),
      *   @OA\Response(response="422", description="Unprocessed entity. (validation errors)")
      * )
      */

@@ -46,6 +46,9 @@
                     "200": {
                         "description": "Comment successfully appended"
                     },
+                    "401": {
+                        "description": "Unauthorized. (Invalid password)"
+                    },
                     "422": {
                         "description": "Unprocessed entity. (validation errors)"
                     }
